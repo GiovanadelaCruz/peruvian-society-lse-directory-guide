@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSE Connect Peru - Student Directory</title>
+    <link href='//fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="logo-container">
+            <a href="https://www.instagram.com/peruviansocietylsesu/?hl=en" target="_blank">
+                <img src="logo/logo_PS_LSE.png" alt="Peruvian Society LSE">
+            </a>
+        </div>         
+        <div class="hero-content">           
+            <h1>¿Pensando en postular a la LSE?</h1>
+            <br>
+            <br>
+            <h3>Conecta con egresados y estudiantes peruanos de la LSE que pueden</h3>
+            <h3>brindarte consejos sobre admisiones, becas y vida académica</h3>
+            <br>
+            <br>
+            <br>
+            <br> 
+            <a href="#directory" class="explore-btn">Explorar directorio</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Directory Section -->
+        <section id="directory">
+            <div class="section-header">
+                <h2 class="section-title">Estudiantes y egresados peruanos de la LSE</h2>
+                <button class="filters-toggle" onclick="toggleFilters(this)">
+                    Buscar por
+                    <span class="filters-toggle-icon">▼</span>
+                </button>
+            </div>
+            
+            <!-- Filters -->
+            <div class="filters-section">
+                <div class="filters-content">
+                    <div class="filter-grid">
+                        <div class="filter-group">
+                            <label class="filter-label" for="lse-department">Departamento/Escuela LSE</label>
+                            <select id="lse-department" class="filter-input">
+                                <option value="">Todos</option>
+                                <option value="economics">Economics</option>
+                                <option value="gender-studies">Gender Studies</option>
+                                <option value="government">Government</option>
+                                <option value="international-development">International Development</option>
+                                <option value="law">Law</option>
+                                <option value="management">Management</option>
+                                <option value="media-communications">Media and Communications</option>
+                                <option value="psychological-and-behavioural-science">Psychological and Behavioural Science</option>
+                                <option value="public-policy">Public Policy</option>
+                                <option value="social-policy">Social Policy</option>
+                                <option value="sociology">Sociology</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label" for="undergraduate">Programa de pregrado</label>
+                            <select id="undergraduate" class="filter-input">
+                                <option value="">Todos</option>
+                                <option value="administracion-empresas">Administración de Empresas</option>  
+                                <option value="arquitectura">Arquitectura</option>
+                                <option value="ciencia-politica-educacion">Ciencia Política y Educación</option>
+                                <option value="ciencia-politica-gobierno">Ciencia Política y Gobierno</option>
+                                <option value="comunicaciones">Comunicaciones</option>
+                                <option value="derecho">Derecho</option>
+                                <option value="diseno-industrial">Diseño Industrial</option>
+                                <option value="economia">Economía</option>
+                                <option value="filosofia">Filosofía</option>
+                                <option value="gestion-organizacional">Gestión Organizacional</option>
+                                <option value="periodismo">Periodismo</option>
+                                <option value="psicologia">Psicología</option>                                
+                                <option value="sociologia">Sociología</option>           
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label" for="university">Universidad de pregrado</label>
+                            <select id="university" class="filter-input">
+                                <option value="">Todos</option>
+                                <option value="pucp">Pontificia Universidad Católica del Perú</option>
+                                <option value="up">Universidad del Pacífico</option>
+                                <option value="unmsm">Universidad Nacional Mayor de San Marcos</option>
+                                <option value="ulima">Universidad de Lima</option>
+                                <option value="upc">Universidad Peruana de Ciencias Aplicadas</option>
+                                <option value="unp">Universidad Nacional de Piura</option>
+                                <option value="upch">Universidad Peruana Cayetano Heredia</option>
+                                <option value="pratt">Pratt Institute</option>
+                                <option value="nyu">NYU Abu Dhabi</option>
+                                <option value="bath">University of Bath</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label" for="region">Región</label>
+                            <select id="region" class="filter-input">
+                                <option value="">Todos</option>
+                                <option value="Arequipa">Arequipa</option>
+                                <option value="Ayacucho">Ayacucho</option>
+                                <option value="Cusco">Cusco</option>
+                                <option value="Junín">Junín</option>
+                                <option value="Lambayeque">Lambayeque</option>
+                                <option value="Lima Metropolitana">Lima Metropolitana</option>        
+                                <option value="Piura">Piura</option>
+                                <option value="Tumbes">Tumbes</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label" for="financing">Tipo de Financiamiento</label>
+                            <select id="financing" class="filter-input">
+                                <option value="">Todos</option>
+                                <option value="bicentenario">Beca Generación del Bicentenario</option>
+                                <option value="chevening">Chevening Scholarship</option>                    
+                                <option value="lse-scholarship">LSE Peruvian Scholarship for Public Service</option>
+                                <option value="lse-general">LSE Scholarship</option>
+                                <option value="ako-foundation">AKO Foundation</option>                                
+                                <option value="reto-excelencia">Programa Reto Excelencia - SERVIR</option>
+                                <option value="autofinanciado">Autofinanciado</option>
+                                <option value="credito">Crédito/préstamo</option>                                
+
+                            </select>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student Directory -->
+            <div class="directory-grid" id="student-directory">
+                <!-- Student cards will be populated here -->
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Mapping of undergraduate program codes to Spanish names
+        const undergraduateNames = {
+            "diseno-industrial": "Diseño Industrial",
+            "gestion-organizacional": "Gestión Organizacional", 
+            "ciencia-politica-gobierno": "Ciencia Política y Gobierno",
+            "psicologia": "Psicología",
+            "sociologia": "Sociología",
+            "derecho": "Derecho",
+            "comunicaciones": "Comunicaciones",
+            "economia": "Economía",
+            "filosofia": "Filosofía",
+            "ciencia-politica-educacion": "Ciencia Política y Educación",
+            "periodismo": "Periodismo",
+            "arquitectura": "Arquitectura",
+            "administracion-empresas": "Administración de Empresas",
+        };
+
+        // Mapping of university codes to full names
+        const universityNames = {
+            "pucp": "Pontificia Universidad Católica del Perú",
+            "up": "Universidad del Pacífico", 
+            "unmsm": "Universidad Nacional Mayor de San Marcos",
+            "ulima": "Universidad de Lima",
+            "upc": "Universidad Peruana de Ciencias Aplicadas",
+            "unp": "Universidad Nacional de Piura",
+            "upch": "Universidad Peruana Cayetano Heredia",
+            "pratt": "Pratt Institute",
+            "nyu": "NYU Abu Dhabi",
+            "bath": "University of Bath",
+        };
+
+        // Mapping of financing codes to full Spanish names
+        const financingNames = {
+            "autofinanciado": "Autofinanciado",
+            "chevening": "Chevening Scholarship",
+            "bicentenario": "Beca Generación del Bicentenario",
+            "lse-scholarship": "LSE Peruvian Scholarship for Public Service",
+            "reto-excelencia": "Programa Reto Excelencia - SERVIR",
+            "credito": "Crédito/préstamo",
+            "ako-foundation": "AKO Foundation",
+        };
+
+        // List of Peruvian students/graduates
+        const students = [
+            {
+                name: "Gonzalo Loayza",
+                status: "Master Student - 2025",
+                program: "Social Innovation and Entrepreneurship",
+                lse_department: "management",
+                undergraduate: "diseno-industrial",
+                university: "pratt",
+                financing: "credito",
+                expertise: "Innovación, experiencia de usuario, diseño centrado en el humano",
+                region: "Lima Metropolitana",
+                linkedin: "https://www.linkedin.com/in/gonzaloloayza",
+                photo: "",
+                avatar: "G"
+            },
+            {
+                name: "Omar Rubio",
+                status: "Master Graduate - 2024",
+                program: "Development Management",
+                lse_department: "international-development",
+                undergraduate: "gestion-organizacional",
+                university: "pucp",
+                financing: "chevening",
+                expertise: "Planeamiento estratégico y evaluación, gestión de investigación, indicadores, gestión universitaria, gestión de proyectos",
+                region: "Lima Metropolitana",
+                linkedin: "https://www.linkedin.com/in/omarrubioquezada",
+                photo: "",
+                avatar: "O"
+            },
+            {
+                name: "Addier Arriola",
+                status: "Master Student - 2025",
+                program: "Criminal Justice Policy",
+                lse_department: "social-policy",
+                undergraduate: "ciencia-politica-gobierno",
+                university: "pucp",
+                financing: "bicentenario",
+                expertise: "Criminología, metodología de la investigación",
+                region: "Lima Metropolitana", 
+                linkedin: "https://uk.linkedin.com/in/addiergiovanniarriolalaura",
+                photo: "",
+                avatar: "A"
+            },
+            {
+                name: "Franco Rengifo",
+                status: "Master Student - 2025",
+                program: "Behavioural Science",
+                lse_department: "psychological-and-behavioural-science",
+                undergraduate: "psicologia",
+                university: "pucp",
+                financing: "autofinanciado",
+                expertise: "Educación, desarrollo social, behavioral science",
+                region: "Lima Metropolitana",
+                linkedin: "https://www.linkedin.com/in/franco-rengifo-qwistgaard-625681149/",
+                photo: "",
+                avatar: "F"
+            },
+            {
+                name: "Pamela Valdivieso",
+                status: "Master Graduate - 2019",
+                program: "Social Policy and Development",
+                lse_department: "social-policy",
+                undergraduate: "sociologia",
+                university: "pucp",
+                financing: "bicentenario",
+                expertise: "Desarrollo e implementación de programas, education policy, monitoreo y evaluación de programas",
+                region: "Lima Metropolitana",
+                linkedin: "https://www.linkedin.com/in/pamelavm",
+                photo: "",
+                avatar: "P"
+            },
+            {
+                name: "Lucía Santos",
+                status: "Master Student - 2025",
+                program: "Gender Rights and Human Rights",
+                lse_department: "gender-studies",
+                undergraduate: "derecho",
+                university: "ulima",
+                financing: "chevening",
+                expertise: "DDHH, género y pueblos indígenas",
+                region: "Cusco",
+                linkedin: "https://uk.linkedin.com/in/lucía-santos/en",
+                photo: "",
+                avatar: "L"
+            },
+            {
+                name: "Andrea Vega",
+                status: "Master Graduate - 2025",
+                program: "Public Policy",
+                lse_department: "public-policy",
+                undergraduate: "derecho",
+                university: "pucp",
+                financing: "reto-excelencia",
+                expertise: "Derecho de la competencia y protección al consumidor",
+                region: "Lima Metropolitana",
+                linkedin: "https://www.linkedin.com/in/andreavegatalledo/",
+                photo: "",
+                avatar: "A"
+            },
+            {
+                name: "César López", 
+                status: "Master Graduate - 2025",
+                program: "Public Administration",
+                lse_department: "public-policy",
+                undergraduate: "comunicaciones",
+                university: "ulima",
+                financing: "autofinanciado",
+                expertise: "Política de salud pública, cooperación sector privado-sector público, política y comunicación, gestión cultural",
+                region: "Lima Metropolitana",
+                linkedin: "https://uk.linkedin.com/in/cesarlopezlinares/en",
+                photo: "",
+                avatar: "C"
+            },
+            {
+                name: "Karina Campos",
+                status: "Master Student - 2025",
+                program: "International Social and Public Policy",
+                lse_department: "social-policy",
+                undergraduate: "psicologia",
+                university: "upch",
+                financing: "autofinanciado",
+                expertise: "Diseño e implementación de proyectos de salud y educación, investigación en salud pública",
+                region: "Lima Metropolitana",
+                linkedin: "https://uk.linkedin.com/in/karina-campos-blanco",
+                photo: "",
+                avatar: "K"
+            },
+            {
+                name: "Samy Galvez",
+                status: "Master Graduate - 2021",
+                program: "Public Administration",
+                lse_department: "public-policy",
+                undergraduate: "economia",
+                university: "upc",
+                financing: "reto-excelencia",
+                expertise: "Finanzas públicas, políticas macroeconómicas, investigación de políticas de protección social",
+                region: "Tumbes",
+                linkedin: "http://linkedin.com/in/samygava",
+                photo: "",
+                avatar: "S"
+            },
+            {
+                name: "Carlos Pérez",
+                status: "PhD Candidate - 2026",
+                program: "Economics",
+                lse_department: "economics",
+                undergraduate: "economia", 
+                university: "pucp",
+                financing: "lse-general",
+                expertise: "Environmental economics, development economics",
+                region: "Ayacucho",
+                linkedin: "https://www.linkedin.com/in/carlos-pérez-cavero-11195542/",
+                photo: "",
+                avatar: "C"
+            },
+            {
+                name: "Alicia Rojas",
+                status: "Master Graduate - 2024",
+                program: "Media, Communication and Development",
+                lse_department: "media-communications",
+                undergraduate: "periodismo",
+                university: "pucp",
+                financing: "autofinanciado",
+                expertise: "Periodismo, desarrollo, y proyectos periodísticos multimedia y enfocados en inteligencia artificial",
+                region: "Lima Metropolitana",
+                linkedin: "https://pe.linkedin.com/in/alicia-rojas-sánchez-44189b94",
+                photo: "",
+                avatar: "A"
+            },
+            {
+                name: "Fátima Acurio",
+                status: "Master Student - 2025",
+                program: "Political Theory",
+                lse_department: "government",
+                undergraduate: "derecho",
+                university: "pucp",
+                financing: "autofinanciado",
+                expertise: "Derecho constitucional, filosofía del derecho y teoría del estado",
+                region: "Cusco",
+                linkedin: "",
+                photo: "",
+                avatar: "F"
+            },
+            {
+                name: "Daniela Uribe",
+                status: "Master Graduate - 2023",
+                program: "Public Administration - Dual Degree",
+                lse_department: "public-policy",
+                undergraduate: "economia",
+                university: "up",
+                financing: "autofinanciado",
+                expertise: "Policy design, M&E approaches, research en educación, stakeholders management",
+                region: "Lima Metropolitana",
+                linkedin: "https://www.linkedin.com/in/danielauribemateu",
+                photo: "",
+                avatar: "D"
+            },
+            {
+                name: "Pamela Ortega",
+                status: "Master Student - 2025",
+                program: "Public Policy",
+                lse_department: "public-policy",
+                undergraduate: "gestion-organizacional",
+                university: "pucp",
+                financing: "autofinanciado",
+                expertise: "Project Management, policy analysis, budget and procurement, strategic planning",
+                region: "Junín",
+                linkedin: "https://www.linkedin.com/in/pamelaortegapalomino/",
+                photo: "",
+                avatar: "P"
+            },
+            {
+                name: "Silvana Manrique",
+                status: "Master Student - 2025",
+                program: "Public Policy",
+                lse_department: "public-policy",
+                undergraduate: "economia",
+                university: "pucp",
+                financing: "autofinanciado",
+                expertise: "Libre competencia, regulación económica, telecomunicaciones",
+                region: "Arequipa",
+                linkedin: "https://www.linkedin.com/in/silvana-manrique-romero-4463bb13a/",
+                photo: "",
+                avatar: "S"
+            },
+            {
+                name: "Yolwin Pariaton",
+                status: "Master Student - 2026",
+                program: "Data Science for Public Policy",
+                lse_department: "public-policy",
+                undergraduate: "economia",
+                university: "unp",
+                financing: "lse-scholarship",
+                expertise: "Educación superior, programación de recursos, seguimiento y monitoreo de políticas y programas",
+                region: "Piura",
+                linkedin: "https://www.linkedin.com/in/yolwin-pariaton-zurita-548867112/",
+                photo: "",
+                avatar: "Y"
+            },
+            {
+                name: "Cinthya Arhuata",
+                status: "Master Student - 2025",
+                program: "Public Policy",
+                lse_department: "public-policy",
+                undergraduate: "derecho",
+                university: "pucp",
+                financing: "lse-scholarship",
+                expertise: "Derecho ambiental y cambio climático",
+                region: "Lima Metropolitana",
+                linkedin: "https://www.linkedin.com/in/cinthya-arhuata-074454b6/",
+                photo: "",
+                avatar: "C"
+            },
+            {
+                name: "Camila Alegria",
+                status: "Master Graduate - 2024",
+                program: "Public Policy",
+                lse_department: "public-policy",
+                undergraduate: "economia",
+                university: "up",
+                financing: "lse-scholarship",
+                expertise: "Manager de proyectos, diseño y seguimiento de implementación de los mismos, presupuesto público, enfoque en desarrollo del capital humano (educación, empleo y salud)",
+                region: "Lima Metropolitana",
+                linkedin: "https://www.linkedin.com/in/cami-alegria",
+                photo: "",
+                avatar: "C"
+            },
+            {
+                name: "Victor Matienzo",
+                status: "Master Graduate - 2024",
+                program: "Public Policy",
+                lse_department: "public-policy",
+                undergraduate: "economia",
+                university: "unmsm",
+                financing: "lse-scholarship",
+                expertise: "Regulación financiera, macroeconomía y análisis económico cuantitativo",
+                region: "Lima Metropolitana",
+                linkedin: "https://www.linkedin.com/in/victormatienzo",
+                photo: "",
+                avatar: "V"
+            },
+            {
+                name: "Lucia Salem",
+                status: "Master Graduate - 2024", 
+                program: "Development Management",
+                lse_department: "international-development",
+                undergraduate: "economia",
+                university: "nyu",
+                financing: "autofinanciado",
+                expertise: "Innovación, diseño estratégico, producto, startups. Investigación cualitativa y cuantitativa, desarrollo, economía",
+                region: "Lima Metropolitana",
+                linkedin: "https://www.linkedin.com/in/luciasalemf/",
+                photo: "",
+                avatar: "L"
+            },
+            {
+                name: "Sol Maria Acuña",
+                status: "Master Graduate - 2024",
+                program: "Public Administration", 
+                lse_department: "public-policy",
+                undergraduate: "economia",
+                university: "up",
+                financing: "autofinanciado",
+                expertise: "Presupuesto público, salud",
+                region: "Lima Metropolitana",
+                linkedin: "https://www.linkedin.com/in/solacunaflores",
+                photo: "",
+                avatar: "S"
+            },
+            {
+                name: "Sharon Bustamante",
+                status: "Master Graduate - 2024",
+                program: "International Social and Public Policy",
+                lse_department: "social-policy",
+                undergraduate: "derecho",
+                university: "pucp",
+                financing: "autofinanciado",
+                expertise: "Derechos humanos, derecho internacional de los refugiados, protección, migratorio",
+                region: "Lima Metropolitana",
+                linkedin: "https://uk.linkedin.com/in/sharon-bustamante-arce",
+                photo: "",
+                avatar: "S"
+            },
+            {
+                name: "Macarena Martinez",
+                status: "Master Graduate - 2024",
+                program: "Social Innovation and Entrepreneurship",
+                lse_department: "management",
+                undergraduate: "filosofia",
+                university: "pucp",
+                financing: "autofinanciado",
+                expertise: "Emprendimiento social, inversión de impacto, diseño estratégico",
+                region: "Lima Metropolitana",
+                linkedin: "https://www.linkedin.com/in/macarena-martinez-61052a127/",
+                photo: "",
+                avatar: "M"
+            },
+            {
+                name: "Beatriz Córdova", 
+                status: "Master Graduate - 2024",
+                program: "Public Policy",
+                lse_department: "public-policy",
+                undergraduate: "ciencia-politica-educacion",
+                university: "unmsm",
+                financing: "lse-scholarship",
+                expertise: "Género, elecciones y democracia, participación política, derechos humanos, adolescencias y juventudes, migración",
+                region: "Lima Metropolitana",
+                linkedin: "https://www.linkedin.com/in/beatriz-cordova-aquino",
+                photo: "",
+                avatar: "B"
+            },
+            {
+                name: "Maria José Castillo",
+                status: "Master Graduate - 2023",
+                program: "Social and Public Communications",
+                lse_department: "psychological-and-behavioural-science",
+                undergraduate: "comunicaciones",
+                university: "ulima",
+                financing: "autofinanciado",
+                expertise: "Comunicaciones corporativas, sostenibilidad, asuntos públicos, economía del comportamiento",
+                region: "Lima Metropolitana",
+                linkedin: "https://www.linkedin.com/in/maria-josé-castillo-llong/",
+                photo: "",
+                avatar: "M"
+            },
+            {
+                name: "Pablo Taborga",
+                status: "Master Graduate - 2023",
+                program: "Development Management",
+                lse_department: "international-development",
+                undergraduate: "economia",
+                university: "bath",
+                financing: "autofinanciado",
+                expertise: "Riesgo, productos financieros, banca PyMe y MyPE peruana",
+                region: "Lima Metropolitana",
+                linkedin: "https://pe.linkedin.com/in/pablotaborga",
+                photo: "",
+                avatar: "P"
+            },            
+            {
+                name: "Antonella Branizza",
+                status: "Master Graduate - 2023",
+                program: "City Design and Social Science",
+                lse_department: "sociology",
+                undergraduate: "arquitectura",
+                university: "pucp",
+                financing: "credito",
+                expertise: "Diseño - espacio público",
+                region: "Lima Metropolitana",
+                linkedin: "https://uk.linkedin.com/in/antonellabranizza/en",
+                photo: "",
+                avatar: "A"
+            },
+            {
+                name: "Maria Serpa",
+                status: "Master Student - 2025",
+                program: "Laws",
+                lse_department: "law",
+                undergraduate: "derecho",
+                university: "pucp",
+                financing: "bicentenario",
+                expertise: "Derecho societario, comercial, corporativo",
+                region: "Lima Metropolitana",
+                linkedin: "https://www.linkedin.com/in/mtserpa/",
+                photo: "",
+                avatar: "M"
+            },
+            {
+                name: "Paola Castillo",
+                status: "Master Graduate - 2023",
+                program: "Social Innovation and Entrepreneurship",
+                lse_department: "management",
+                undergraduate: "derecho",
+                university: "ulima",
+                financing: "autofinanciado",
+                expertise: "Social design, impact measurement, impact investment y derecho corporativo",
+                region: "Lambayeque",
+                linkedin: "https://uk.linkedin.com/in/paolacastillo18",
+                photo: "",
+                avatar: "P"
+            },
+            {
+                name: "Oriana Lu",
+                status: "Master Student - 2025",
+                program: "Social and Cultural Psychology",
+                lse_department: "psychological-and-behavioural-science",
+                undergraduate: "psicologia",
+                university: "pucp",
+                financing: "ako-foundation",
+                expertise: "Psicóloga clínica con experiencia en atención a poblaciones vulnerables, primeros auxilios psicológicos y atención a niños con habilidades diferentes",
+                region: "Lima Metropolitana",
+                linkedin: "https://pe.linkedin.com/in/orianalucaceres1995",
+                photo: "",
+                avatar: "O"
+            },
+            {
+                name: "Luis Pazos",
+                status: "Master Graduate - 2023",
+                program: "Social Innovation and Entrepreneurship",
+                lse_department: "management",
+                undergraduate: "administracion-empresas",
+                university: "upc",
+                financing: "chevening",
+                expertise: "Emprendimiento, consultoría en marketing, growth marketing",
+                region: "Lima Metropolitana",
+                linkedin: "https://pe.linkedin.com/in/luismiguelpazos",
+                photo: "",
+                avatar: "L"
+            },
+            {
+                name: "Laura Saavedra",
+                status: "Master Student - 2025",
+                program: "Human Resources and Organisations",
+                lse_department: "management",
+                undergraduate: "psicologia",
+                university: "pucp",
+                financing: "autofinanciado",
+                expertise: "HR, reclutamiento, psicología educacional, gestión curricular",
+                region: "Lima Metropolitana",
+                linkedin: "https://www.linkedin.com/in/laura-saavedra-4a8717200/",
+                photo: "",
+                avatar: "L"
+            },
+            {
+                name: "Giovana De La Cruz",
+                status: "Master Graduate - 2025",
+                program: "Data Science for Public Policy",
+                lse_department: "public-policy",
+                undergraduate: "economia",
+                university: "unmsm",
+                financing: "lse-scholarship",
+                expertise: "Políticas públicas basados en evidencia (educación, salud), evaluación de impacto, ciencia de datos, visualización de datos",
+                region: "Callao",
+                linkedin: "https://uk.linkedin.com/in/giovana-de-la-cruz/en",
+                photo: "https://giovanadelacruz.github.io/peruvian-society-lse-directory-guide-support/photos/MGDC_LSE_Profile.jpg",
+                avatar: "G"
+            }                                                      
+        ];
+
+        function createStudentCard(student) {
+            // Get the Spanish name for undergraduate program
+            const undergraduateName = undergraduateNames[student.undergraduate] || student.undergraduate;
+            const universityName = universityNames[student.university] || student.university;
+            const financingName = financingNames[student.financing] || student.financing;
+            
+            return `
+                <div class="student-card" 
+                     data-lse-department="${student.lse_department}" 
+                     data-undergraduate="${student.undergraduate}" 
+                     data-university="${student.university}" 
+                     data-financing="${student.financing}" 
+                     data-region="${student.region}" 
+                     data-name="${student.name.toLowerCase()}">
+                    <div class="student-header">
+                        <div class="student-avatar ${student.photo ? 'has-photo' : 'no-photo'}" ${student.photo ? `style="background-image: url('${student.photo}')"` : ''}>
+                            ${student.photo ? '' : student.avatar}
+                        </div>
+                        <h3 class="student-name">${student.name}</h3>
+                        <div class="student-program">${student.program}</div>
+                        <div class="student-status">${student.status}</div>
+                    </div>
+                    <div class="student-body">
+                        <button class="toggle-button" onclick="toggleDetails(this)">
+                            Más
+                        </button>
+                        <div class="student-details">
+                            <div class="info-grid">
+                                <div class="info-item">                                    
+                                    <div class="info-content">
+                                        <span class="info-highlight">Departamento LSE:</span><br>
+                                        ${student.lse_department.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+                                    </div>
+                                </div>
+                                <div class="info-item">                                    
+                                    <div class="info-content">
+                                        <span class="info-highlight">Financiamiento:</span><br>
+                                        ${financingName}
+                                    </div>
+                                </div>
+                                <div class="info-item">                                    
+                                    <div class="info-content">
+                                        <span class="info-highlight">Programa de pregrado:</span><br>
+                                        ${undergraduateName}
+                                    </div>
+                                </div>
+                                <div class="info-item">                                
+                                    <div class="info-content">
+                                        <span class="info-highlight">Universidad de pregrado:</span><br>
+                                        ${universityName}
+                                    </div>
+                                </div>                                
+                                <div class="info-item">
+                                    <div class="info-content">
+                                        <span class="info-highlight">Experiencia/Interés en:</span><br>
+                                        ${student.expertise}
+                                    </div>
+                                </div>
+                                <div class="info-item">                                
+                                    <div class="info-content">
+                                        <span class="info-highlight">Región:</span><br>
+                                        ${student.region}
+                                    </div>
+                                </div>
+                                ${student.linkedin ? `
+                                <div class="info-item">                                
+                                    <div class="info-content">
+                                        <span class="info-highlight">LinkedIn:</span><br>
+                                        <a href="${student.linkedin}" target="_blank" style="color: #dc2626; text-decoration: underline;">Ver perfil</a>
+                                    </div>
+                                </div>
+                                ` : ''}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderDirectory() {
+            // Crear una copia del array y mezclarla aleatoriamente
+            const shuffledStudents = [...students].sort(() => Math.random() - 0.5);
+            const directory = document.getElementById('student-directory');
+            directory.innerHTML = shuffledStudents.map(createStudentCard).join('');
+        }
+        function filterStudents() {
+            const lseDepartmentFilter = document.getElementById('lse-department').value;
+            const undergraduateFilter = document.getElementById('undergraduate').value;
+            const universityFilter = document.getElementById('university').value;
+            const regionFilter = document.getElementById('region').value;
+            const financingFilter = document.getElementById('financing').value;
+
+            const cards = document.querySelectorAll('.student-card');
+            let visibleCount = 0;
+            
+            cards.forEach((card, index) => {
+                const matchesLSEDepartment = !lseDepartmentFilter || card.dataset.lseDepartment === lseDepartmentFilter;
+                const matchesUndergraduate = !undergraduateFilter || card.dataset.undergraduate === undergraduateFilter;
+                const matchesUniversity = !universityFilter || card.dataset.university === universityFilter;
+                const matchesRegion = !regionFilter || card.dataset.region === regionFilter;
+                const matchesFinancing = !financingFilter || card.dataset.financing === financingFilter;
+
+                const shouldShow = matchesLSEDepartment && matchesUndergraduate && matchesUniversity && 
+                                  matchesRegion && matchesFinancing;
+
+                if (shouldShow) {
+                    card.style.display = 'block';
+                    card.style.animation = `fadeInUp 0.6s ease-out ${visibleCount * 0.1}s both`;
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function toggleFilters(button) {
+            const filtersSection = document.querySelector('.filters-section');
+            const content = filtersSection.querySelector('.filters-content');
+            const icon = button.querySelector('.filters-toggle-icon');
+            const isExpanded = content.classList.contains('expanded');
+            
+            if (isExpanded) {
+                content.classList.remove('expanded');
+                button.classList.remove('active');
+                icon.textContent = '▼';
+            } else {
+                content.classList.add('expanded');
+                button.classList.add('active');
+                icon.textContent = '▲';
+            }
+        }
+
+        function toggleDetails(button) {
+            const card = button.closest('.student-card');
+            const details = card.querySelector('.student-details');
+            const isExpanded = details.classList.contains('expanded');
+            
+            if (isExpanded) {
+                details.classList.remove('expanded');
+                button.textContent = 'Más';
+            } else {
+                details.classList.add('expanded');
+                button.textContent = 'Menos';
+            }
+        }
+
+        function connectWith(studentName) {
+            alert(`¡Excelente elección! Estás a punto de conectarte con ${studentName}. En una aplicación real, esto abriría un sistema de mensajería o formulario de contacto para iniciar la conversación sobre tu postulación a LSE.`);
+        }
+
+        // Iniciar el directorio
+        document.addEventListener('DOMContentLoaded', function() {
+            renderDirectory();
+            
+            // Agregar por todos los filtros
+            document.getElementById('lse-department').addEventListener('change', filterStudents);
+            document.getElementById('undergraduate').addEventListener('change', filterStudents);
+            document.getElementById('university').addEventListener('change', filterStudents);
+            document.getElementById('region').addEventListener('change', filterStudents);
+            document.getElementById('financing').addEventListener('change', filterStudents);
+        });
+
+        // Smooth scroll for explore button
+        document.querySelector('.explore-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('directory').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    <footer class="footer">
+        <div class="footer-content">        
+            <p><strong>LSE PERUVIAN SOCIETY |</strong><a href="https://www.instagram.com/peruviansocietylsesu/?hl=en" target="_blank" class="social-link">instagram</a></p>            
+            <p><em>Página web creada por Giovana De La Cruz | <a href="https://github.com/GiovanadelaCruz" target="_blank">GitHub</a></em></p>
+        </div>
+    </footer>    
+</body>
+</html>
