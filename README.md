@@ -4,6 +4,8 @@ Web platform that connects Peruvian applicants with current students and alumni 
 
 Prospective students can search by academic department, undergraduate program, funding type, and region to find people who can provide advice on admissions, scholarships, and academic life at LSE.
 
+Link: https://giovanadelacruz.github.io/peruvian-society-lse-directory-guide/
+
 ## Features
 - 🔍 Advanced filtering by multiple criteria
 - 👥 Detailed student and alumni profiles
