@@ -252,6 +252,9 @@
 
         .student-avatar.has-photo {
             font-size: 0;
+            background-size: cover;
+            background-position: center 25%;
+            background-repeat: no-repeat;            
         }
 
         .student-avatar.no-photo {
