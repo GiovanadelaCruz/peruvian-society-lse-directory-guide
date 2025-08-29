@@ -616,6 +616,8 @@
                 linkedin: "https://www.linkedin.com/in/mtserpa/",
                 email: "serpas.mt@gmail.com",
                 photo: "https://giovanadelacruz.github.io/peruvian-society-lse-directory-guide-support/photos/Maria_Teresa_Serpa.jpeg",
+                photoPosition: "0% 50%",
+                photoSize: "150%",
                 avatar: "M"
             },
             {
@@ -768,7 +770,7 @@
                      data-region="${student.region}" 
                      data-name="${student.name.toLowerCase()}">
                     <div class="student-header">
-                        <div class="student-avatar ${student.photo ? 'has-photo' : 'no-photo'}" ${student.photo ? `style="background-image: url('${student.photo}'); ${student.photoPosition ? `background-position: ${student.photoPosition};` : ''}"` : ''}>
+                        <div class="student-avatar ${student.photo ? 'has-photo' : 'no-photo'}" ${student.photo ? `style="background-image: url('${student.photo}'); ${student.photoPosition ? `background-position: ${student.photoPosition};` : ''} ${student.photoSize ? `background-size: ${student.photoSize};` : ''}"` : ''}>
                             ${student.photo ? '' : student.avatar}
                         </div>
                         <h3 class="student-name">${student.name}</h3>
@@ -905,10 +907,6 @@
                 details.classList.add('expanded');
                 button.textContent = 'Menos';
             }
-        }
-
-        function connectWith(studentName) {
-            alert(`¡Excelente elección! Estás a punto de conectarte con ${studentName}. En una aplicación real, esto abriría un sistema de mensajería o formulario de contacto para iniciar la conversación sobre tu postulación a LSE.`);
         }
 
         // Iniciar el directorio
